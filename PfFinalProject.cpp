@@ -144,8 +144,7 @@ bool paymentProcess(int total, string &method){
 
 void saveBooking(const string &movie, const string &time, int total, const string &method){
     ofstream fout("booking.txt", ios::app);
-    fout<<movie<<" | "<<time<< " | " 
-         <<total<< " | " <<method<<endl;
+    fout<<movie<<" | "<<time<<" | "<<total<< " | "<<method<<endl;
     fout.close();
 }
 
@@ -163,7 +162,6 @@ void bookYourTicket() {
     }
 
     int total = selectSeats(movies[index].price);
-
     string paymentMethod;
     if(!paymentProcess(total, paymentMethod)){
         cout<<"Sorry for Booking cancelled\n";
@@ -189,7 +187,7 @@ void viewHistory(){
     }
 
     string line;
-    cout<<"\n BOOKING HISTORY\n";
+    cout<<"\n Booking the2 History\n";
     while(getline(fin, line))
         cout<<line<<endl;
 fin.close();
@@ -213,3 +211,4 @@ int main(){
     }
     return 0;
 }
+
